@@ -12,13 +12,3 @@ services:
       - POSTGRES_DB=postgres
     volumes:
       - ./postgresql:/var/lib/postgresql
-  admin:
-    image: dpage/pgadmin4
-    container_name: pgadmin4
-    ports:
-      - 7000:80
-    environment:
-      PGADMIN_DEFAULT_EMAIL: root@root.net
-      PGADMIN_DEFAULT_PASSWORD: root
-    depends_on:
-      - db
